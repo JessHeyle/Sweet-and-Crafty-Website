@@ -1,0 +1,377 @@
+/*author: Jessica Heyle Student ID: R00131139 Email: Jessica.heyle@mycit.ie*/
+/*author: Jessica Heyle Student ID: R00131139 Email: Jessica.heyle@mycit.ie*/
+
+#maincontainer, header, footer, section, aside
+{
+	border-style : solid;
+	border-width : 2px;
+	border-color : #6600CC;
+	margin : 10px 10px 10px 10px;
+	background-color: #FFFF99;
+}
+
+#wrapperText, #imageDisplay, #facebookImage
+ {
+	display : none;
+ }
+ 
+#subheading
+{
+text-align:center;
+color: #6600CC;
+font-size: 20px;
+margin-bottom: 5px;
+margin-right: 118px;
+}
+
+header
+{
+background-color: white;
+}
+footer
+{
+	background-color : #F7F1FC;
+	display : flex;
+	font-family : Helvetica, Arial, sans-serif;
+	background-color: white;
+}
+
+footer #email, #tel, #facebook
+{
+flex-basis : 25%;	
+}
+
+#email
+{
+	margin-left: 5px;
+}
+
+#tel
+{
+	margin-right: 5px;
+	text-align: right;
+}
+
+footer #copyright 
+{
+	flex-basis : 50%;
+	text-align: center;
+}
+
+#copyright a
+{
+	text-decoration : none;
+	font-style: italic;
+	color: black;
+}
+
+#copyright a:hover {
+	color: rgba(153,0,48, 0.8);
+	border-style : solid;
+	border-width : 1px;
+	border-color : #6600CC;
+}
+
+section
+{
+	border-radius : 6px 6px 6px 6px;
+	box-shadow : 10px 10px 5px grey;
+	font-size: 20px;
+	text-align: center;
+	background-color: white;
+}
+
+aside
+{
+	background-color : #F7F1FC;
+	font-family : Helvetica, Arial, sans-serif;
+	padding-left: 10px;
+	background-color: white;
+}
+
+main
+{
+	display : flex;
+	font-family : Helvetica, Arial, sans-serif;
+}
+
+section
+{
+	flex-basis : 70%;
+}
+
+aside
+{
+	flex-basis : 30%;
+}
+
+#headerimage
+{
+	max-width: 100%;
+	height: auto;
+	float : left;
+	margin-top: 10px;
+}
+
+#name
+{
+text-align: center;
+margin-right: 118px;
+color: #6600CC;
+font-family: Kristen ITC;
+font-size: 40px;
+margin-top: 5px;
+margin-bottom: 1px;
+}
+
+#facebook a
+{
+	text-decoration : none;
+	color: #6600CC;
+}
+
+#facebook a:hover {
+	color: rgba(153,0,48, 0.8);
+	border-style : solid;
+	border-width : 1px;
+	border-color : #6600CC;
+}
+
+#productlist a
+{
+	text-decoration : none;
+	color: #6600CC;
+}
+
+#formSection
+{
+	text-align : left;
+	padding-left : 2%;
+}
+
+#productlist a:hover {
+	color: blue;
+	border-style : solid;
+	border-width : 1px;
+	border-color : #6600CC;
+}
+
+#tabledecorations, #yesequality
+{
+	width : 80%;
+	height: auto;
+	margin : 10px 10px 10px 10px;
+}
+
+#minicones, #products
+{
+	width : 50%;
+	height: auto;
+	margin : 10px 10px 0px 20px;
+}
+
+#specials
+{
+	text-align: center;
+}
+
+nav ul
+{
+	text-align : center;
+}
+
+nav li
+{
+	list-style : none;
+	display : inline-block;
+	margin : 0px 0px 0px 40px;
+	color: black;
+	font-family : Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	
+}
+
+nav a
+{
+	text-decoration : none;
+	color: black;
+	padding :20px 10px 20px 10px;
+	border:1px solid transparent;
+	padding: 0px 0px 0px 0px;
+	font-family : Helvetica, Arial, sans-serif;
+}
+
+nav a:hover {
+	color: rgba(153,0,48, 0.8);
+	border-style : solid;
+	border-width : 1px;
+	border-color : #6600CC;
+	padding: 0px 0px 0px 0px;
+	font-family : Helvetica, Arial, sans-serif;
+}
+
+/*This floats the cost amounts to the right*/
+.cost
+{
+	float: right;
+	padding-right : 50%;
+}
+
+#terms, #facebookImage
+{
+	font-size : 70%;
+}
+.textSubheadings
+{
+	font-size : 80%;
+}
+
+#wrapper
+{
+	background-color : white;
+	height : auto;
+	position : absolute;
+	right : 130px;
+}
+
+#dynamicImageSection
+{
+	border : none;
+	background : none;
+	flex-basis : 60%;
+}
+
+h6
+{
+margin-bottom: 10px;
+text-align: center;
+text-decoration: bold;
+font-size: 20px;
+}
+
+#terms
+{
+text-align: center;
+font-style: italic;
+}
+
+#facebook
+{
+text-align: center;
+}
+
+
+/* SMALLER DESKTOP MODE or SMALLER BROWSER WINDOW
+ When the viewport drops below 980px then stop fixed width and make
+ the maincontainer auto size to the width of the device */
+ 
+@media screen and (max-width :980px)
+{
+	#maincontainer
+	{
+		width : auto;
+	}
+}
+
+/* TABLET MODE
+   When the viewport drops below 700px then change the layout of <main> 
+   from flex to block. Also get rid of <main>'s border and margin.
+*/
+
+@media screen and (max-width : 700px)
+{
+	main
+	{
+		display : block;
+		border : none;
+		margin : 0px 0px 0px 0px;
+	}
+	
+	nav ul
+	{
+		width : 180px;
+		margin-left : 10px;
+	}
+	
+	
+	/* Removes the red border on the list
+	 * items which was there in desktop mode 
+	 * and hides all list items */
+	 
+	nav li
+	{
+		border-style : none;
+		display : none;
+	}
+	
+	nav .current
+	{
+		display : block;
+	}
+	
+	nav ul:hover li
+	{
+		display : block;
+	}
+	
+	aside
+	{
+		display : none;
+	}
+	
+footer 
+{
+word-wrap: break-word;
+display:block;
+}
+
+#tel
+{
+text-align:center;
+}
+
+#email 
+{
+text-align:center;
+font-size: 11px;
+}
+	
+}
+/* PHONE MODE
+   When the viewport drops below 400px then drop the <aside> part and 
+   reduce the font size of the <h1> in header.
+*/
+@media screen and (max-width : 400px)
+{
+	aside
+	{
+		display : none;
+	}
+	h1
+	{
+		font-size : 16px;
+	}
+	
+	footer 
+{
+word-wrap: break-word; 	 
+display:block;
+}
+
+#tel
+{
+text-align:center;
+}
+
+nav li
+	{
+		word-wrap: break-word; 	
+		margin-left : 30px;
+	}
+
+#email 
+{
+text-align:center;
+font-size: 11px;
+}
+}

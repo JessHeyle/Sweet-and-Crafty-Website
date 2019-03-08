@@ -1,0 +1,118 @@
+<!--author: Jessica Heyle Student ID: R00131139 Email: Jessica.heyle@mycit.ie-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sweet & Crafty Cork Order Form</title>
+		<LINK rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="js/calculate.js"></script>
+		<meta charset = "utf-8">
+		<meta name="keywords" content="Sweets, Personalised, Bars, Bubbles, Drinks, Cones, Parties, Weddings, Birthdays, Christenings, Communions">
+		<meta name= "description" content="Personalised Sweets for All Occasions. Weddings, Birthdays, Christenings, Hen Nights and more. Based
+		in Cork City. Special Offers, Packages, great prices. Read More...">
+	</head>
+	
+	<body>
+		<DIV id="maincontainer">
+			<HEADER>
+				<IMG id="headerimage" SRC="images/logo.png" alt="Logo">
+				<h1 id="name">
+				Sweet & Crafty<br> 
+				Cork<br>
+				</h1>
+				<H3 id="subheading">
+				Personalised Sweets for All Occasions
+				</H3>
+			</HEADER>
+			<!-- This is the navigation menu -->
+			<NAV>
+				<UL>
+					<LI><A HREF="index.html">Home</A></LI>
+					<LI><A HREF="products.html">Products</A></LI>
+					<LI><A HREF="about.html">About Us</A></LI>
+					<LI><A HREF="contact.html">Contact Us</A></LI>
+					<LI class="current"><A HREF="form.html">Order Now</A></LI>
+				</UL>
+			</NAV>
+			<form method = "post" action="http://atlantis.cit.ie/displayvalues.php" id="orderForm"><!--Send form to PHP-->
+			<MAIN>	
+				<!-- This section will take up 40% with of the main -->
+				<SECTION id="formSection">
+					<p> 
+					<h4>Choose A Colour for the Wrapper:</h4>
+					<select id="Colours" onchange="colourChange()">
+					<option value="White" default>White</option>
+					  <option value="Pink">Pink</option>
+					  <option value="Blue">Blue</option>
+					  <option value="Green">Green</option>
+					  <option value="Red">Red</option>
+					  <option value="Yellow">Yellow</option>
+					  <option value="Orange">Orange</option>
+					  <option value="Purple">Purple</option>
+					  <option value="Silver">Silver</option>
+					  <option value="Gold">Gold</option>
+					  <option value="Black">Black</option>
+					</select>	
+				</p>
+				<p> 
+					<h4>Wrapper Information:</h4>
+					<p>Do you want to add text?</br>
+						<input type="radio" name="Text" value="YesText" id="yesText" onclick="textVisible()">Yes</br>
+						<input type="radio" name="Text" value="NoText" id="noText" onclick="textVisible()">No</br>
+					</p>
+					<p id="wrapperText">
+					Main Text:</br>
+					<input type="text" name="textRequested" placeholder="e.g. Jessica's 6th Birthday"></br></br>
+					Date (if no date required on wrapper leave blank):</br>
+					<input type="text" name="textRequested" placeholder="e.g. 16.12.2015"></br>
+					</p>
+					<p>Do you want to add an image?</br>
+						<input type="radio" name="Image" value="YesImage" id="yesImage" onclick="imageVisible()">Yes</br>
+						<input type="radio" name="Image" value="NoImage" id="noImage" onclick="imageVisible()">No</br>
+					</p>
+					<p id="imageDisplay">
+					Image Type:</br>
+					<input type="text" name="imageRequested" placeholder="e.g. Mickey Mouse"></br></br>
+					Do you want to choose your own image? (e.g photograph/scan picture):</br>
+						<input type="radio" name="OwnImage" value="YesOwnImage" id="yesOwnImage" onclick="showEmail()">Yes</br>
+						<input type="radio" name="OwnImage" value="NoOwnImage" id="noOwnImage" onclick="showEmail()">No</br>
+					<p id="facebookImage">
+					Please send us your image in a message on facebook:</br>
+					<A HREF="www.facebook.com/sweetandcraftycork">Sweet and Crafty Cork Facebook Page</A></br>
+					Or email it to us here:</br>
+					<a href="mailto:jess@sweetandcraftycork.com">jess@sweetandcraftycork.com</a>
+					</p>
+				</p>
+					
+				</p></br>
+				<p> 
+					<h4>Add On Extras</h4>
+					<input type="checkbox" name="Lollipops" value="Lollipops" id="Lollipops"> 10 Lollipops<span class="cost"> &euro;5</span></br>
+					<input type="checkbox" name="Lovehearts" value="Lovehearts" id="Lovehearts"> 10 Lovehearts<span class="cost"> &euro;5</span></br>
+					<input type="checkbox" name="Coins" value="Coins" id="Coins"> 10 Coins<span class="cost"> &euro;5</span></br>
+					<input type="checkbox" name="PartyPoppers" value="PartyPoppers" id="PartyPoppers"> 10 Party Poppers<span class="cost"> &euro;5</span></br>
+					<input type="checkbox" name="Lollipops" value="Lollipops" id="Lollipops"> 10 Lollipops<span class="cost"> &euro;5</span></br>
+				</p></br>
+				<p> <!--Total Information-->
+					Total: <input type="text" size="2" name="total" value="" id="total" readonly>
+					<button type="button" value="submit" onclick="orderSubmit()">Order Now</button><!--On clicking Order Now run the orderSubmit function. This ensures the form is not submitted when the field is blank-->
+					<p id ="terms">Your order will be reviewed before confirmation. You will be contacted within 48 hours. 
+					For last minute orders or if you have any questions, contact us using one of the below contact methods.</p>
+				</p></br>
+				</SECTION>
+				<aside id = "dynamicImageSection">
+				<img id="wrapper" src="images/wrapper.png" width="313" height="501">
+				</aside>
+			</MAIN>	
+			</form>
+		
+			<FOOTER>
+				<p id="email"><a href="mailto:jess@sweetandcraftycork.com">jess@sweetandcraftycork.com</a> </p>
+				<p id="facebook"><A HREF="www.facebook.com/sweetandcraftycork">Find us on Facebook</A></p>
+				<p id="copyright">&copy; Sweet and Crafty</p>
+				<p id="tel"> (083) 1414203 </p>
+			</FOOTER>
+			</FOOTER>
+		</DIV>	
+	</body>
+</html>	
